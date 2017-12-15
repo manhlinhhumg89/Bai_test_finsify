@@ -1,4 +1,4 @@
-# Bai_test_finsify
+
 # Bài test công ty finsify
 ## Yêu cầu: Xây dựng 1 ứng dụng đơn giản (CRUD app) có các chức năng thêm, sửa, xóa, hiển thị danh sách của  sinh viên
 * Trong ứng dụng của mình tác giả chỉ dùng express js, database MongoDb, template hiển thị là ejs
