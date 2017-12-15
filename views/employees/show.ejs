@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Employee Detail</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/employees">Danh sach sinh vien</a></h3>
+      <h2>Chi tiet sinh vien</h2>
+      <table class="table">
+        <tbody>
+          <tr>
+            <td>Ho Ten</td>
+            <td>:</td>
+            <td><%= employee.name %></td>
+          </tr>
+          <tr>
+            <td>Dia chi</td>
+            <td>:</td>
+            <td><%= employee.address %></td>
+          </tr>
+          <tr>
+            <td>Lop</td>
+            <td>:</td>
+            <td><%= employee.position %></td>
+          </tr>
+          <tr>
+            <td>Tuoi</td>
+            <td>:</td>
+            <td><%= employee.age %></td>
+          </tr>
+          <tr>
+            <td>Ma sinh vien</td>
+            <td>:</td>
+            <td><%= employee.id_card %></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a href="/employees/edit/<%= employee._id%>">Sua</a></h3>
+      <form action="/employees/delete/<%= employee._id%>" method="post">
+        <button type="submit">Xoa</button>
+      </form>
+    </div>
+  </body>
+</html>

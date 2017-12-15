@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Edit Employee</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/employees">Danh sách sinh viên</a></h3>
+      <h1>Sửa sinh viên</h1>
+      <form action="/employees/update/<%= employee._id%>" method="post">
+        <table>
+          <tbody>
+            <tr>
+              <td>Ho ten</td>
+              <td><input type="text" name="name" value="<%= employee.name %>" /></td>
+            </tr>
+            <tr>
+              <td>Dia Chi</td>
+              <td><textarea name="address"><%= employee.address %></textarea></td>
+            </tr>
+            <tr>
+              <td>Lop</td>
+              <td><input type="text" name="position" value="<%= employee.position %>" /></td>
+            </tr>
+            <tr>
+              <td>Tuoi</td>
+              <td><input type="number" name="age" value="<%= employee.age %>" /></td>
+            </tr>
+            <tr>
+              <td>Ma Sinh vien</td>
+              <td><input type="text" name="id" value="<%= employee.id_card %>" /></td>
+            </tr>
+            <tr>
+              <td colspan="2"><button type="submit">Cập Nhật</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>

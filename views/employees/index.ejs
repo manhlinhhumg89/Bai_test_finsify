@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Employee List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/employees/create">Khoi tao sinh vien moi</a></h3>
+      <h2>Danh sach sinh vien</h2>
+      <% if(employees.length>0) { %>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Ho ten</th>
+            <th>Dia chi</th>
+            <th>Lop</th>
+            <th>Tuoi</th>
+            <th>Ma Sinh vien</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <% for(var i=0; i<employees.length;i++) { %>
+            <tr>
+              <td><a href="/employees/show/<%= employees[i]._id%>"><%= employees[i].name%></a></td>
+              <td><%= employees[i].address%></td>
+              <td><%=employees[i].position%></td>
+              <td><%=employees[i].age%></td>
+              <td><%=employees[i].id_card%></td>
+              
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+      <% } else { %>
+        <div>No employees found.</div>
+      <% } %>
+    </div>
+  </body>
+</html>

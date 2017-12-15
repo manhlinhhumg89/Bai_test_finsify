@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create Employee</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/employees">Hien thi danh sach sinh vien</a></h3>
+      <h3>Tao 1 sinh vien moi</h1>
+      <form action="/employees/save" method="post">
+        <table>
+          <tbody>
+            <tr>
+              <td>Name</td>
+              <td><input type="text" name="name" /></td>
+            </tr>
+            <tr>
+              <td>Address</td>
+              <td><textarea name="address"></textarea></td>
+            </tr>
+            <tr>
+              <td>Position</td>
+              <td><input type="text" name="position" /></td>
+            </tr>
+            <tr>
+              <td>Age</td>
+              <td><input type="number" name="age" /></td>
+            </tr>
+            <tr>
+              <td>Id_card</td>
+              <td><input type="text" name="id_card" /></td>
+            </tr>
+            <tr>
+              <td colspan="2"><button type="submit">Lưu</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>
